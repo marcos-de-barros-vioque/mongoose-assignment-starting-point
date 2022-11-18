@@ -1,17 +1,43 @@
 [
   {
-    "name": "Banane",
+    "name": "Banana ",
     "category": "Food",
-    "detail": "Eine leckere Banane"
+    "detail": "A tasty Banana"
   },
   {
-    "name": "Leberwurst",
+    "name": "Sausage ",
     "category": "Food",
-    "detail": "Einfach unwiderstehlich"
+    "detail": "So good!"
   },
   {
-    "name": "iPhone",
+    "name": "iPhone ",
     "category": "Technology",
-    "detail": "Top Produkt"
+    "detail": "Top product"
+  }
+  ,
+  {
+    "name": "TV ",
+    "category": "Technology",
+    "detail": "Best product ever"
+  },
+  {
+    "name": "Chair ",
+    "category": "Furniture",
+    "detail": "Best quality possible"
+  },
+  {
+    "name": "Apple ",
+    "category": "Food",
+    "detail": "An apple a day keep the doctor away"
+  },
+  {
+    "name": "Table ",
+    "category": "Furniture",
+    "detail": "Best product ever"
+  },
+  {
+    "name": "Screen ",
+    "category": "Technology",
+    "detail": "Top quality"
   }
 ]

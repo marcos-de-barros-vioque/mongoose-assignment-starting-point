@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState(null); //"Food", "Technology"
-  const [shouldReload, setShouldReload] = useState(true);
+  //const [shouldReload, setShouldReload] = useState(true);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -27,18 +27,19 @@ const Products = () => {
         console.log(error);
         alert(error.message);
       }
-      setShouldReload(false)
+      //setShouldReload(false)
     };
-    if (shouldReload) {
-      getProducts()};
-  }, [categoryFilter, shouldReload]);
+    //if (shouldReload) {
+      getProducts();
+  }, [categoryFilter]);
 
   async function deleteProduct(id) {
     try {
       const response = await fetch(`/api/products/${id}`, {method: "DELETE"})
       if (response.ok) {
         alert(`Product successfully deleted`);
-        setShouldReload(true);
+        window.location.reload();
+        //setShouldReload(true);
       } else {
         throw new Error(`Fetch fehlgeschlagen mit Status: ${response.status}`);
       }

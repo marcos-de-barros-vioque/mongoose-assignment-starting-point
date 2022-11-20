@@ -1,43 +1,43 @@
 [
   {
-    "name": "Banana ",
-    "category": "Food",
-    "detail": "A tasty Banana"
+    "name": "Banane",
+    "category": "Essen",
+    "detail": "Oh wie lecker!"
   },
   {
-    "name": "Sausage ",
-    "category": "Food",
-    "detail": "So good!"
+    "name": "Wurst",
+    "category": "Essen",
+    "detail": "So schmeckt's besser!"
   },
   {
-    "name": "iPhone ",
-    "category": "Technology",
-    "detail": "Top product"
+    "name": "Smartphone",
+    "category": "Hi-Fi",
+    "detail": "Top produkt!"
   }
   ,
   {
-    "name": "TV ",
-    "category": "Technology",
-    "detail": "Best product ever"
+    "name": "TV",
+    "category": "Hi-Fi",
+    "detail": "Bestes Produkt auf dem Markt."
   },
   {
-    "name": "Chair ",
-    "category": "Furniture",
-    "detail": "Best quality possible"
+    "name": "Stuhl",
+    "category": "Möbel",
+    "detail": "Qualität auf dem höchsten Niveau!"
   },
   {
-    "name": "Apple ",
-    "category": "Food",
-    "detail": "An apple a day keep the doctor away"
+    "name": "Apfel",
+    "category": "Essen",
+    "detail": "An apple a day keep the doctor away."
   },
   {
-    "name": "Table ",
-    "category": "Furniture",
-    "detail": "Best product ever"
+    "name": "Esstisch",
+    "category": "Möbel",
+    "detail": "Was für ein gutes Produkt!"
   },
   {
-    "name": "Screen ",
-    "category": "Technology",
-    "detail": "Top quality"
+    "name": "Bildschirm",
+    "category": "Hi-Fi",
+    "detail": "Bestes Preis-Qualität-Verhältnis."
   }
 ]

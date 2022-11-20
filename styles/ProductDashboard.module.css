@@ -2,3 +2,24 @@
   list-style: none;
   margin: 10px
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1000px;
+  padding: 20px 50px 30px 30px;
+  border: 2px solid black;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.product-button {
+  margin-left: 20px;
+}

@@ -7,6 +7,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState(null); //"Food", "Technology"
   //const [shouldReload, setShouldReload] = useState(true);
+  const [newProduct, setNewProduct] = useState("");
 
   useEffect(() => {
     const getProducts = async () => {
@@ -48,6 +49,24 @@ const Products = () => {
   }
 }
 
+  async function addNewProduct(event) {
+    event.preventDefault()
+    const data = {
+      name: event.target.name.value,
+      category: event.target.category.value,
+    };
+    const endpoint = "api/products";
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    };
+    const response = await fetch(endpoint, options);
+    console.log(data);
+    const result = await response.json();
+    window.location.reload();
+  }
+  
   return (
     <>
       <Head>
@@ -68,25 +87,43 @@ const Products = () => {
           }}
         >
           <option value="all">Alle</option>
-          <option value="Food">Food</option>
-          <option value="Technology">Technology</option>
-          <option value="Furniture">Furniture</option>
+          <option value="Essen">Essen</option>
+          <option value="Hi-Fi">Hi-Fi</option>
+          <option value="Möbel">Möbel</option>
         </select>
-        <p>{categoryFilter}</p>
 
-        <h2>Unsere Produkte</h2>
-        <p>Wähle ein Produkt aus:</p>
+        <h2>Unser Angebot in der Kategorie {categoryFilter}</h2>
+        <p>Wähle dein Lieblingsprodukt aus:</p>
 
         <ul className={styles["product-list"]}>
           {products.map((product) => {
             return (
               <li key={product._id}>
                 <Link href={`/products/${product._id}`}>{product.name}</Link>
-                <button onClick={() => deleteProduct(product._id)}>DELETE</button>
+                <button className={styles["product-button"]} onClick={() => deleteProduct(product._id)}>ENTFERNEN</button>
               </li>
             );
           })}
         </ul>
+
+        <h2>Füge deine Produkte hinzu</h2>
+        <p>Du suchst nach einem bestimmten Produkt aber es ist nicht dabei? Teile uns direkt im Forumular mit, um welches Produkt es geht!</p>
+
+        <form onSubmit={(e) => addNewProduct(e)} className={styles["form"]}>
+          <label htmlFor="name" className={styles["form-label"]}>Produkt</label>
+          <input 
+          type="text"
+          name="name"
+          id="name" 
+          className={styles["form-input"]}></input>
+          <label htmlFor="category" className={styles["form-label"]}>Kategorie</label>
+          <input 
+          type="text"
+          name="category"
+          id="category" 
+          className={styles["form-input"]}></input>
+          <button type="submit">Produkt hinzufügen</button>
+        </form>
       </div>
     </>
   );
